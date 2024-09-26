@@ -1,0 +1,31 @@
+.review {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+
+  .imgCrop img{
+    max-height: 4em;
+    border-radius: 50%;
+  }
+  .content{
+    width: 100%;
+
+    .topBar{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      color: var(--secondary-font-color);
+      .fullName{
+        font-weight: 600;
+        color: var(--primary-font-color);
+      }
+    }
+    .description {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  // that is because tailwind side effect
+  outline: none;
+}
+:root {
+  font-family: Poppins, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 16px;
+  height: auto;
+  color-scheme: light;
+  color: #000;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  // color palette
+  --main-bg-color: #fff;
+
+  //main
+  --primary-color: #301466;
+  --secondary-color: #5c3d99;
+  --third-color: #38a3a5;
+  --forth-color: #57cc99;
+
+  //text
+  --primary-font-color: #1a1a1a;
+  --secondary-font-color: #555555;
+  --inverse-font-color: #fff;
+  //links
+  --primary-link-color: #646cff;
+  --primary-link-hover-color: #646cff;
+  --secondary-link-color: #1a1a1a;
+  --inverse-link-color: #fff;
+
+  //navbar
+  --logo-color: var(--forth-color);
+  --nav-bg-color: var(--primary-color);
+  --nav-top-bg-color: #fff;
+  --nav-secondary-bg-color: var(--main-bg-color);
+  --nav-font-color: var(--inverse-link-color);
+  --nav-item-bg-hover-color: var(--secondary-color);
+
+  //button
+  --btn-bg-color: #38a3a5;
+  --btn-bg-hover-color: #229193;
+  --btn-font-color: var(--inverse-font-color);
+  --btn-border-color: #4eb1b2;
+}
+
+a {
+  font-weight: 500;
+  color: var(--primary-link-color);
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: var(--primary-link-hover-color);
+}
+
+body {
+  margin: 0;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  color: var(--primary-font-color);
+  background-color: var(--main-bg-color);
+}
+
+// General styles for all heading elements
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0; // Remove default margin
+  margin-bottom: 0.5em; // Add some spacing between headings and other elements
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+h5 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 0 1em;
+}
+
+b {
+  font-weight: 600;
+}
+
+i {
+  font-weight: 300;
+}
+
+.button {
+  background-color: var(--btn-bg-color);
+  color: var(--btn-font-color);
+  border-color: var(--btn-border-color);
+
+  &:hover {
+    background-color: var(--btn-bg-hover-color) !important;
+  }
+}
+
+// specific style for flowbite/tooltip
+.w-fit {
+  width: 100%;
+}
+
+// specific style for flowbite/modal
+@media (max-width: 768px) {
+  .md\:h-auto {
+    height: auto;
+  }
+}

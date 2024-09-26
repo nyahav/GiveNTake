@@ -1,0 +1,17 @@
+.preWrittenMessagesWrap {
+  display: flex;
+  gap: 0.5em;
+  // row-gap: 0.5em;
+  flex-wrap: wrap;
+  margin-bottom: 1em;
+  button {
+    // color: var(--primary-font-color);
+    background-color: #ddd;
+    border-radius: 2em;
+  }
+}
+
+.actions {
+  display: flex;
+  gap: 0.5em;
+}

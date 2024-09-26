@@ -1,0 +1,114 @@
+.profileInfo {
+  position: relative;
+  display: flex; /* Default display for large screens (optional) */
+  align-items: flex-start;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+
+  button {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+  }
+}
+
+.stats .stat {
+  align-items: center;
+  text-align: center;
+  &:hover {
+    color: var(--secondary-font-color);
+  }
+}
+.statNumber {
+  font-weight: bold;
+}
+
+.profileLeft {
+  img.profileImg {
+    max-height: 8em;
+    width: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 10em;
+  }
+
+  .interestsWrap {
+    display: flex;
+    flex-wrap: wrap;
+    .interest {
+      line-height: 2.2em;
+      margin-right: 0.2em;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .profileInfo {
+    display: grid;
+    grid-template-rows: auto auto;
+  }
+
+  .profileLeft,
+  .profileRight {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .topActions {
+    position: static;
+    margin-top: 1rem;
+  }
+
+  .actions {
+    grid-row: 1;
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+
+  .profileLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    img {
+      max-height: 100%;
+      width: auto;
+      aspect-ratio: 1;
+      object-fit: cover;
+    }
+  }
+
+  .stats {
+    grid-row: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-left: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .profileLeft {
+    // max-height: 100%;
+    // width: auto;
+    // aspect-ratio: 1;
+    // object-fit: cover;
+  }
+
+  .actions {
+    margin-left: 6rem;
+  }
+  .stats {
+    display: flex;
+
+    gap: 1rem;
+    margin-left: 7rem;
+  }
+}

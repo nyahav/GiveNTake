@@ -1,0 +1,20 @@
+.postCreator {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.header {
+  padding: 10px;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.textBoldOut {
+  background-color: var(--forth-color);
+  border-radius: 1rem;
+  padding: 0.7rem;
+  text-align: center;
+  color: white;
+}

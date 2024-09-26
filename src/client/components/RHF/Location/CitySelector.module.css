@@ -1,0 +1,46 @@
+.locationSelection {
+  position: relative;
+  /* margin-left: 5px; */
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 100%;
+}
+
+.searchInput {
+  /* padding: 10px; */
+  /* border: 2px solid #ccc; */
+  border-radius: 10px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.searchResults {
+  position: absolute;
+  background-color: #fff;
+  margin-top: 2.8em;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  z-index: 9;
+}
+
+
+.searchResults:hover {
+  cursor: pointer;
+}
+
+.searchResults li {
+  padding: 8px 12px;
+  /* Adjust padding for better spacing */
+  font-size: 16px;
+}
+
+.searchResults li {
+  padding: 8px 12px;
+  /* Adjust padding for better spacing */
+}

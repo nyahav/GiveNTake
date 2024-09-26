@@ -1,0 +1,25 @@
+.popoverWrap {
+  display: flex;
+  flex-direction: column;
+
+  a {
+    &:focus-visible {
+      border: none;
+      box-shadow: none;
+    }
+
+    display: flex;
+    gap: 5px;
+    padding: 15px 25px;
+    color: #000;
+    align-items: center;
+
+    &:hover {
+      background-color: #eee;
+    }
+  }
+
+  a:last-child {
+    border-top: 1px solid #ddd;
+  }
+}

@@ -1,0 +1,26 @@
+.list {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  row-gap: 20px;
+  /* Adjust gap size as needed for spacing between posts */
+  column-gap: 20px;
+
+  @media screen and (max-width: 428px) {
+    display: flex;
+    /* Reset to grid layout for larger screens */
+    flex-direction: column;
+  }
+}
+
+.row {
+  // display: flex;
+  // column-gap: 1em;
+}

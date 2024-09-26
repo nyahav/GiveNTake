@@ -1,0 +1,44 @@
+form {
+  .helpDates > div {
+    display: flex;
+    gap: 0.5em;
+    width: 95%;
+  }
+}
+
+.label {
+  display: block;
+  margin: 2px;
+  padding: 4px;
+  font-weight: 600;
+}
+.remoteHelp {
+  background-color: #eee;
+  padding: 2px 5px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.submitButton {
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+  gap: 1em;
+}
+.startTime,
+.endTime {
+  width: fit-content;
+  max-width: 60px;
+  overflow: hidden;
+}
+
+input[type='checkbox'] {
+  border-radius: 20%;
+  margin: 3px;
+  border: 2px solid black;
+}
+input[type='checkbox']:hover {
+  border: 3px solid #201f1f;
+}

@@ -1,0 +1,271 @@
+.modalWrap {
+  .post {
+    overflow-y: scroll;
+
+    .btnOpenModal {
+      display: none;
+    }
+  }
+}
+
+.post {
+  // border: 1px solid #eee;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  width: 100%;
+
+  &.featuredPost {
+    width: 15em;
+    margin-right: 1em;
+    box-shadow: none;
+  }
+
+  &.reportedPost {
+    position: relative;
+    display: inline-block;
+
+    .reportedPostInnerWrap {
+      filter: blur(3px);
+    }
+  }
+
+  .postHeader,
+  .postFooter {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .postHeader {
+    justify-content: space-between;
+    padding-right: 20px;
+
+    .btnOpenModal {
+      cursor: pointer;
+      padding: 7px;
+
+      &:hover {
+        background: #eee;
+        border-radius: 50%;
+      }
+    }
+
+    .actions {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 1em;
+
+      .btnMore {
+        width: 1.5em;
+        height: 1.5em;
+        cursor: pointer;
+        padding: 0.3em;
+        box-sizing: content-box;
+        border-radius: 10em;
+
+        &:hover {
+          background-color: #eee;
+        }
+      }
+
+      .postFromInterests {
+        svg {
+          padding: 0.3em;
+          box-sizing: content-box;
+
+          border-radius: 10em;
+
+          &:hover {
+            background-color: #eee;
+          }
+        }
+      }
+
+      .popover {
+        position: absolute;
+        right: -3em;
+        background-color: #fff;
+        width: 9em;
+        border: 1px solid #eee;
+        border-radius: 0.2em;
+
+        span {
+          padding: 0.2em;
+          padding-left: 0.6em;
+          display: flex;
+          gap: 0.2em;
+          align-items: center;
+          cursor: pointer;
+          font-size: 0.95em;
+
+          &:hover {
+            background-color: #eee;
+          }
+
+          svg {
+            width: 1.1em;
+            height: 1.1em;
+            cursor: pointer;
+            border-radius: 10em;
+          }
+        }
+      }
+    }
+
+    h6 {
+      margin: 0;
+      font-weight: 600;
+    }
+
+    p {
+      margin: 0;
+      font-size: 14px;
+      color: #888;
+    }
+  }
+
+  .profilePic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .postBody {
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &.featuredPost {
+      height: 15.2em;
+    }
+
+    .imgCrop {
+      position: relative;
+      width: 100%;
+
+      &.featuredPost {
+        img {
+          width: 100%;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          height: 10em;
+          object-fit: cover;
+        }
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        //padding-bottom: 100%;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        //margin-bottom: 10px;
+        //position: absolute;
+        //width: 100%;
+        //height: 100%;
+        //object-fit: contain;
+      }
+    }
+
+    .title {
+      padding: 10px 10px 0 10px;
+      margin: 0;
+      font-weight: 500;
+    }
+
+    p {
+      padding: 10px;
+      margin: 0;
+    }
+
+    &.showMore {
+      overflow: visible;
+    }
+
+    .readMore {
+      background-color: transparent;
+      color: #333;
+      padding: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: underline;
+
+      &:hover {
+        background-color: #eee;
+      }
+    }
+  }
+
+  .postFooter {
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: space-between;
+
+    .likes {
+      display: flex;
+      align-items: center;
+
+      .likeButton {
+        height: 25px;
+        margin-right: 4px;
+        margin-left: 10px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .hand {
+      .wavingHand {
+        height: 26px;
+        margin-right: 6px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      // .pressToHelp {
+      //   margin-top: 18px;
+      //   margin-right: 15px;
+      // }
+    }
+
+    .report {
+      height: 22px;
+      width: 23px;
+      margin-top: 2px;
+      cursor: pointer;
+    }
+  }
+}
+
+//report style
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(200, 200, 200, 0.7);
+  /* Semi-transparent white overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  i {
+    font-size: 48px;
+    color: black;
+  }
+}
+
+.disabled {
+  cursor: not-allowed !important;
+}

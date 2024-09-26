@@ -1,0 +1,112 @@
+.wrapper {
+  display: flex;
+  flex-direction: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+  // margin-top: 1em;
+  // margin-bottom: 2em;
+  font-size: 0.8em;
+
+  .filtersWrap {
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+    font-size: 1.2em;
+    font-weight: 400;
+    flex-wrap: wrap;
+
+    & > span {
+      display: flex;
+      align-items: center;
+      gap: 0.6em;
+    }
+
+    .filterBox {
+      position: relative;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.17);
+      color: #656969;
+      // border: 0.1rem solid #DCDEDD;
+      gap: 0.6em;
+
+      & > button {
+        padding: 0.5rem 1rem;
+        padding-right: 0.6em;
+      }
+
+      svg {
+        width: 1em;
+        height: 1em;
+        color: #000;
+      }
+
+      .categoriesList {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* 3 columns with equal width */
+        gap: 10px;
+        font-size: 0.8em;
+
+        & > a {
+          display: flex;
+          margin: 0.4em;
+          width: max-content;
+          color: var(--secondary-link-color);
+          cursor: pointer;
+          padding: 5px;
+          min-width: 10em;
+          align-items: center;
+          gap: 10px;
+
+          &:hover {
+            background-color: #eee;
+          }
+        }
+      }
+    }
+  }
+}
+
+.locationLabel {
+  margin-right: 5px;
+}
+
+.currentLocation {
+  display: flex;
+}
+
+.currentCity {
+  white-space: nowrap;
+}
+
+.radiusContainer {
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.dropdown {
+  width: fit-content;
+}
+
+.changeButton {
+  font-style: italic;
+  cursor: pointer;
+  color: grey;
+  margin: 10px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.citySelector {
+  position: absolute;
+  /* Make the selector positioned absolutely */
+  transform: translateX(-80px);
+  z-index: 1;
+}
+
+.item {
+  // justify-content: center;
+}

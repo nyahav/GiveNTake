@@ -1,0 +1,13 @@
+{
+    "workbench.editor.labelFormat": "short",
+    "scss.lint.unknownAtRules": "ignore",
+    "editor.formatOnSave": true,
+    "prettier.printWidth": 100,
+    "prettier.singleQuote": true,
+    "prettier.trailingComma": "none",
+    "prettier.eslintIntegration": true,
+    "editor.tabSize": 2,
+    // "[javascript]": {
+    //     "editor.formatOnSave": false
+    // }
+}

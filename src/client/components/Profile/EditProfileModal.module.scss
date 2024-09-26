@@ -1,0 +1,142 @@
+.profileContainer {
+    max-width: 60rem;
+    margin: 2rem auto;
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+  }
+  
+  .picture {
+    margin: auto;
+    background-size: cover;
+    width: 15%;
+    height: 15%;
+    border-radius: 50%;
+  }
+  
+  .username {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .location,
+  .rating,
+  .interests,
+  .info {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  
+  .interests span {
+    margin-right: 5px;
+  }
+  
+  .info {
+    text-align: right;
+    padding: 10px;
+    background-color: #eee;
+    border: 2px solid black;
+    border-radius: 2px;
+    /* Corrected radius for box around text */
+  }
+  
+  .ratingContainer {
+    display: inline-flex;
+  }
+  
+  .star {
+    @apply cursor-pointer text-yellow-400 h-6 w-6;
+    position: relative;
+    margin: 0 2px;
+  }
+  
+  .star::before {
+    content: "★";
+    position: absolute;
+    color: transparent;
+  }
+  
+  .filled::before {
+    color: #f4d35e;
+  }
+  
+  .ratingContainer>.star:nth-child(-n + 4):before {
+    color: #f4d35e;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  @mixin button-styles {
+    padding: 10px 20px;
+    border: 1px solid #000000;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  
+  .followBtn,
+  .contactBtn {
+    @include button-styles;
+    background-color: #ddd;
+    margin-left: 5px;
+  }
+  
+  .followBtn,
+  .contactBtn {
+    &:hover {
+      background-color: #eee;
+    }
+  }
+  
+  .editBtn {
+    cursor: pointer;
+    border-radius: 50%;
+    color: white;
+    background-color: #777;
+    padding: 15px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-left: auto;
+    transition: all 0.2s ease-in-out;
+  
+    &:hover {
+      background-color: #333;
+    }
+  }
+  
+  .editBtn svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .interestsGrid {
+    display: grid;
+    margin-bottom: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-content: center;
+  
+    .interestBtn {
+      @include button-styles;
+      background-color: #ddd;
+      transition: background-color 0.3s;
+    }
+  
+    .interestBtn.selected {
+      background-color: #f4d35e;
+      /* Change color when selected */
+    }
+  }
+
+  .formActions {
+    display: flex;
+    gap: 1rem;
+  }
